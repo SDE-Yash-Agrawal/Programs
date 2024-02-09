@@ -7,6 +7,7 @@ public class PyramidOfNumbers
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
 		Func1(n);
+		Func2(n);
 	}
 
 	static void Func1(int n)
@@ -38,6 +39,39 @@ public class PyramidOfNumbers
 	           7 7 7 7 7 7 7
 	          8 8 8 8 8 8 8 8
 	         9 9 9 9 9 9 9 9 9
+
+    	*/
+	}
+
+	static void Func2(int n)
+	{
+		int col = 1;
+		for(int i=n; i>=1; i--)
+		{
+			for(int j=i; j>=1 ;j--)
+			{
+				System.out.print(" ");
+			}
+
+			for(int k=1; k<col+1; k++)
+			{
+				System.out.print(" "+k);
+			}
+			System.out.println();
+			col++;
+		}
+
+		/* Input - 9
+
+	       Output -   1
+			         1 2
+			        1 2 3
+			       1 2 3 4
+			      1 2 3 4 5
+			     1 2 3 4 5 6
+			    1 2 3 4 5 6 7
+			   1 2 3 4 5 6 7 8
+			  1 2 3 4 5 6 7 8 9
 
     	*/
 	}
